@@ -10,7 +10,7 @@
             <StackPanel Grid.Column="0">
                 
             </StackPanel>
-        <ListView Grid.Column="1" ItemsSource="{Binding Path=CarImages}">
+        <ListView Grid.Column="1" ItemsSource="{Binding Path=Report.CarImages}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="140" Header="RegisterPlateLike" DisplayMemberBinding="{Binding Path=RegisterPlate}"/>

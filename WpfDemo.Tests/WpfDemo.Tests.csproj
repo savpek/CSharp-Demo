@@ -88,7 +88,7 @@
     <Compile Include="Unit\MessageAggregatorUnitTests.cs" />
     <Compile Include="Unit\NullUnitTests.cs" />
     <Compile Include="Unit\PropertyChangedInterceptorUnitTests.cs" />
-    <Compile Include="Unit\ReportViewModel.cs" />
+    <Compile Include="Unit\ReportViewModelUnitTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Integration\" />
