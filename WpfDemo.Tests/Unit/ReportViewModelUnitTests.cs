@@ -2,7 +2,7 @@
 using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
-using SqlScriptRunner.GUI;
+using WpfDemo.Components;
 using WpfDemo.Domain;
 using WpfDemo.Messages;
 using WpfDemo.ViewModel;

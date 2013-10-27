@@ -1,6 +1,6 @@
 ﻿using FluentAssertions;
 using NUnit.Framework;
-using SqlScriptRunner.GUI;
+using WpfDemo.Components;
 
 namespace WpfDemo.Tests.Unit
 {

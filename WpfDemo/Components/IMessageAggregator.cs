@@ -1,6 +1,6 @@
 using System;
 
-namespace SqlScriptRunner.GUI
+namespace WpfDemo.Components
 {
     public interface IMessageAggregator
     {

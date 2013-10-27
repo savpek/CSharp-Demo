@@ -65,7 +65,7 @@
     <Compile Include="Components\AsynchronousIsDisabledContext.cs" />
     <Compile Include="Components\IMessageAggregator.cs" />
     <Compile Include="Components\MessageAggregator.cs" />
-    <Compile Include="Utilities\NullCheck.cs" />
+    <Compile Include="Components\Null.cs" />
     <Compile Include="ViewModel\FiltersViewModel.cs" />
     <Compile Include="ViewModel\Filters\ColorFilterViewModel.cs" />
     <Compile Include="ViewModel\Filters\RegisterPlateFilterViewModel.cs" />

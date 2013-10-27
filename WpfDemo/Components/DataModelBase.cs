@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using WpfDemo.Annotations;
+using WpfDemo.Properties;
 
 namespace WpfDemo.Components
 {

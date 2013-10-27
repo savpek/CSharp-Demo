@@ -1,9 +1,8 @@
 ﻿using System.Collections.ObjectModel;
 using Castle.Core.Internal;
-using SqlScriptRunner.GUI;
+using WpfDemo.Components;
 using WpfDemo.Domain;
 using WpfDemo.Messages;
-using WpfDemo.Utilities;
 
 namespace WpfDemo.ViewModel
 {

@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using SqlScriptRunner.GUI;
 using WpfDemo.Components;
 using WpfDemo.Domain;
 using WpfDemo.ViewModel;

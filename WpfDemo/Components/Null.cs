@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace WpfDemo.Utilities
+namespace WpfDemo.Components
 {
     public static class Null
     {

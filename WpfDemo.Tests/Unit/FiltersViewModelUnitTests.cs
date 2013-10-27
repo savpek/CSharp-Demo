@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
 using FluentAssertions;
 using NUnit.Framework;
-using SqlScriptRunner.GUI;
 using WpfDemo.Components;
 using WpfDemo.ViewModel;
 using WpfDemo.ViewModel.Filters;

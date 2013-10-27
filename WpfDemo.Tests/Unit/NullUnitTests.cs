@@ -2,7 +2,7 @@
 using FluentAssertions;
 using NUnit.Core;
 using NUnit.Framework;
-using WpfDemo.Utilities;
+using WpfDemo.Components;
 
 namespace WpfDemo.Tests.Unit
 {

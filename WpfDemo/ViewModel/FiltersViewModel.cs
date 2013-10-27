@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Windows.Documents;
 using System.Windows.Input;
-using SqlScriptRunner.GUI;
 using WpfDemo.Components;
 using WpfDemo.ViewModel.Filters;
 
