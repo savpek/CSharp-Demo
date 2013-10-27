@@ -6,14 +6,13 @@ namespace WpfDemo.Components
     {
         public void Intercept(IInvocation invocation)
         {
-            string methodName = invocation.Method.Name;
-            object target = invocation.InvocationTarget;
+            var methodName = invocation.Method.Name;
 
             if (methodName.StartsWith("set_") && methodName != "set_Modified")
             {
-                var obj = (DataModelBase)target;
+                var target = (DataModelBase)invocation.Proxy;
                 var propertyName = methodName.Substring(methodName.IndexOf('_') + 1);
-                obj.OnPropertyChanged(propertyName);
+                target.OnPropertyChanged(propertyName);
                 invocation.Proceed();
             }
             else
@@ -24,13 +23,10 @@ namespace WpfDemo.Components
             invocation.Proceed();
         }
 
-        public static T Get<T>() where T: DataModelBase
+        public static T Get<T>(T target) where T: DataModelBase
         {
             var generator = new ProxyGenerator();
-
-            var t = generator.CreateClassProxy<T>(new PropertyChangedInterceptor());
-
-            return t;
+            return generator.CreateClassProxyWithTarget(target, new PropertyChangedInterceptor());
         }
     }
 }

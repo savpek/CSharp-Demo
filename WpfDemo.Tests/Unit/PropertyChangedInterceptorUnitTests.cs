@@ -19,32 +19,35 @@ namespace WpfDemo.Tests.Unit
         [Test]
         public void PropertyChanged_NotifyPropertyChanged()
         {
-            var bar = PropertyChangedInterceptor.Get<TestClass>();
-            bar.MonitorEvents();
+            var targetObject = new TestClass();
+            var intercepted = PropertyChangedInterceptor.Get(targetObject);
+            intercepted.MonitorEvents();
 
-            bar.FirstProperty = "Foo";
+            intercepted.FirstProperty = "Foo";
 
-            bar.ShouldRaisePropertyChangeFor(x => x.FirstProperty);
+            intercepted.ShouldRaisePropertyChangeFor(x => x.FirstProperty);
         }
 
         [Test]
         public void NoPropertyChanged_DontNotifyPropertyChanged()
         {
-            var bar = PropertyChangedInterceptor.Get<TestClass>();
-            bar.MonitorEvents();
+            var targetObject = new TestClass();
+            var intercepted = PropertyChangedInterceptor.Get(targetObject);
+            intercepted.MonitorEvents();
 
-            bar.ShouldNotRaisePropertyChangeFor(x => x.FirstProperty);
+            intercepted.ShouldNotRaisePropertyChangeFor(x => x.FirstProperty);
         }
 
         [Test]
         public void PropertyIsNonVirtual_DontNotifyPropertyChanged()
         {
-            var bar = PropertyChangedInterceptor.Get<TestClass>();
-            bar.MonitorEvents();
+            var targetObject = new TestClass();
+            var intercepted = PropertyChangedInterceptor.Get(targetObject);
+            intercepted.MonitorEvents();
 
-            bar.SecondProperty = "Test";
+            intercepted.SecondProperty = "Test";
 
-            bar.ShouldNotRaisePropertyChangeFor(x => x.SecondProperty);
+            intercepted.ShouldNotRaisePropertyChangeFor(x => x.SecondProperty);
         }
     }
 }
