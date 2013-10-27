@@ -80,8 +80,9 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="Acceptance\FilteringItemsIntegrationTests.cs" />
+    <Compile Include="Acceptance\FilteringItemsAcceptanceTests.cs" />
     <Compile Include="TestDataTemplates.cs" />
+    <Compile Include="Unit\FiltersViewModelUnitTests.cs" />
     <Compile Include="Unit\InMemoryRepositoryUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit\MessageAggregatorUnitTests.cs" />

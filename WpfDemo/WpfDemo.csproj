@@ -66,7 +66,9 @@
     <Compile Include="Components\IMessageAggregator.cs" />
     <Compile Include="Components\MessageAggregator.cs" />
     <Compile Include="Utilities\NullCheck.cs" />
+    <Compile Include="ViewModel\FiltersViewModel.cs" />
     <Compile Include="ViewModel\Filters\ColorFilterViewModel.cs" />
+    <Compile Include="ViewModel\Filters\RegisterPlateFilterViewModel.cs" />
     <Compile Include="ViewModel\Filters\IFilter.cs" />
     <Compile Include="ViewModel\Filters\PassEverythingFilter.cs" />
     <Compile Include="ViewModel\ReportViewModel.cs" />

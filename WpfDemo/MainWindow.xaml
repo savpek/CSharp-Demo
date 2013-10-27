@@ -13,8 +13,8 @@
         <ListView Grid.Column="1" ItemsSource="{Binding Path=CarImages}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="140" Header="RegisterPlate" DisplayMemberBinding="{Binding Path=RegisterPlate}"/>
-                    <GridViewColumn Width="140" Header="Color" DisplayMemberBinding="{Binding Path=Color}"/>
+                    <GridViewColumn Width="140" Header="RegisterPlateLike" DisplayMemberBinding="{Binding Path=RegisterPlate}"/>
+                    <GridViewColumn Width="140" Header="ColorLike" DisplayMemberBinding="{Binding Path=Color}"/>
                     <GridViewColumn Width="140" Header="Speed" DisplayMemberBinding="{Binding Path=Speed}"/>
                 </GridView>
             </ListView.View>
