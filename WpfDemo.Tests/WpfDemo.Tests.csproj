@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="FluentAssertions">
       <HintPath>..\packages\FluentAssertions.2.1.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
@@ -79,6 +82,8 @@
   <ItemGroup>
     <Compile Include="Unit\InMemoryRepositoryUnitTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Unit\PropertyChangedInterceptorUnitTests.cs" />
+    <Compile Include="Unit\ReportViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Acceptance\" />

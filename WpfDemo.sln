@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo", "WpfDemo\WpfDemo.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfDemo.Tests", "WpfDemo.Tests\WpfDemo.Tests.csproj", "{9DB20138-7FE4-49C0-9489-FDF166FB7472}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messages", "Messages", "{40671BEB-6DBE-4D07-860E-4C0866FA5EE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

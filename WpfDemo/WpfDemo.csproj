@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\packages\Castle.Core.3.2.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
@@ -53,6 +56,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Components\DataModelBase.cs" />
+    <Compile Include="Components\PropertyChangedInterceptor.cs" />
+    <Compile Include="Domain\CarImaging.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Components\AsyncCommand.cs" />
+    <Compile Include="Components\AsynchronousIsDisabledContext.cs" />
+    <Compile Include="Components\IMessageAggregator.cs" />
+    <Compile Include="Components\MessageAggregator.cs" />
+    <Compile Include="ViewModel\ReportViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +98,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -96,7 +109,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="ViewModel\" />
     <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
