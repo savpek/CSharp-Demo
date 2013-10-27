@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WpfDemo.Utilities
+namespace WpfDemo.Components
 {
     // This context can be used to disable asynchronous operations. This main purpose is 
     // to enable testability. But this also can be used to make AsyncCommand as non asynchronous

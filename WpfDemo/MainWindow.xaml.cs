@@ -17,7 +17,7 @@ namespace WpfDemo
             // In real world app there should be good framework for this and this should be done
             // outside of main window for reason that then mainwindow is interchangeable too if required.
             var dataSource = new InMemoryRepository();
-            var reportViewModel = new ReportViewModel(dataSource);
+            var reportViewModel = new ReportViewModel(dataSource, null);
             DataContext = reportViewModel;
         }
     }

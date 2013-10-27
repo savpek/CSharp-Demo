@@ -10,14 +10,14 @@ namespace WpfDemo.Components
 
             if (methodName.StartsWith("set_") && methodName != "set_Modified")
             {
-                var target = (DataModelBase)invocation.Proxy;
                 var propertyName = methodName.Substring(methodName.IndexOf('_') + 1);
+
+                var target = (DataModelBase)invocation.Proxy;
                 target.OnPropertyChanged(propertyName);
+
                 invocation.Proceed();
-            }
-            else
-            {
-                invocation.Proceed();
+                
+                return;
             }
 
             invocation.Proceed();

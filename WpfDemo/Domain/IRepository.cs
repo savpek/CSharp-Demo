@@ -1,9 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 
 namespace WpfDemo.Domain
 {
-    interface IRepository
+    public interface IRepository
     {
         void Add<T>(T target);
         void Delete<T>(T target);

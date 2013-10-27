@@ -1,8 +1,5 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using FluentAssertions;
+﻿using FluentAssertions;
 using NUnit.Framework;
-using WpfDemo.Annotations;
 using WpfDemo.Components;
 
 namespace WpfDemo.Tests.Unit

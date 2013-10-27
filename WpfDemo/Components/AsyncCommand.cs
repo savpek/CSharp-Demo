@@ -2,7 +2,7 @@
 using System.Windows.Input;
 using System.Windows.Threading;
 
-namespace WpfDemo.Utilities
+namespace WpfDemo.Components
 {
     public class AsyncCommand : ICommand
     {
@@ -11,8 +11,7 @@ namespace WpfDemo.Utilities
         private readonly Dispatcher _dispatcher;
         private bool _isExecuting;
 
-        public AsyncCommand(Action command, 
-            Func<bool> canExecute)
+        public AsyncCommand(Action command, Func<bool> canExecute)
         {
             _command = command;
             _canExecute = canExecute;
@@ -30,24 +29,8 @@ namespace WpfDemo.Utilities
         {
             if (AsynchronousIsDisabledContext.IsAsyncCommandsEnabled)
             {
-                Action a = () =>
-                               {
-                                   try
-                                   {
-                                       _isExecuting = true;
-                                       _command();
-                                   }
-                                   catch (Exception ex)
-                                   {
-                                       // Throw uncatched exceptions to UI thread, this probably will crash application which is good thing.
-                                       _dispatcher.BeginInvoke((Action) delegate { throw ex; });
-                                   }
-                                   finally
-                                   {
-                                       _isExecuting = false;
-                                   }
-                               };
-                a.BeginInvoke(null, null);
+                WrapActionWithErrorHandling()
+                    .BeginInvoke(null, null);
             }
             else
                 _command();
@@ -67,18 +50,25 @@ namespace WpfDemo.Utilities
             }
         }
 
-        public void ThrowAsynExceptionsToUiThreadWrapper(Action action)
+        private Action WrapActionWithErrorHandling()
         {
-            try
+            return () =>
             {
-                action();
-            }
-            catch (Exception ex)
-            {
-                var throwAction =
-                new Action(delegate { throw ex; });
-                _dispatcher.BeginInvoke(throwAction);
-            }
+                try
+                {
+                    _isExecuting = true;
+                    _command();
+                }
+                catch (Exception ex)
+                {
+                    // Throw uncatched exceptions to UI thread, this probably will crash application which is good thing.
+                    _dispatcher.BeginInvoke((Action)delegate { throw ex; });
+                }
+                finally
+                {
+                    _isExecuting = false;
+                }
+            };
         }
     }
 }
