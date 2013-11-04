@@ -29,7 +29,7 @@ namespace WpfDemo.Components
 
         private static object GetExpressionValue<T>(Expression<Func<T, object>> expression, T targetObject)
         {
-            var key = typeof(T).Name + expression;
+            var key = typeof(T) + expression.ToString();
 
             if (ExpressionCache.ContainsKey(key))
                 return ((Func<T, object>)ExpressionCache[key]).Invoke(targetObject);
