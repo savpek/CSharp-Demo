@@ -10,7 +10,7 @@ namespace WpfDemo.ViewModel
     public class FiltersViewModel
     {
         private readonly MessageAggregator _messenger;
-        private List<IFilter> _filters;
+        private readonly List<IFilter> _filters;
 
         public FiltersViewModel(List<IFilter> filters, MessageAggregator messenger)
         {
