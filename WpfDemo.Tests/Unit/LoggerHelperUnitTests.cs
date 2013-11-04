@@ -50,8 +50,8 @@ namespace WpfDemo.Tests.Unit
         [Test]
         public void WithVeryLargeAmountOfPrints_BeNearlyAsFastAsToCommonManualToString()
         {
-            this.Invoking(x => x.TestExpressionVersion(new Dummy(), 10000)).ExecutionTime().ShouldNotExceed(100.Milliseconds());
-            this.Invoking(x => x.TestToStringVersion(new Dummy(), 10000)).ExecutionTime().ShouldNotExceed(100.Milliseconds());
+            this.Invoking(x => x.TestExpressionVersion(new Dummy(), 100000)).ExecutionTime().ShouldNotExceed(100.Milliseconds());
+            this.Invoking(x => x.TestToStringVersion(new Dummy(), 100000)).ExecutionTime().ShouldNotExceed(100.Milliseconds());
         }
 
         private void TestExpressionVersion(Dummy targetObject, int count)
