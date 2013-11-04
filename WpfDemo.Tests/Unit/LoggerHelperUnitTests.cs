@@ -70,7 +70,7 @@ namespace WpfDemo.Tests.Unit
         {
             for (int i = 0; i < count; i++)
             {
-                var devNull = FormatExtensions.FormatProperties(targetObject, 
+                var devNull = targetObject.FormatProperties(
                     x => x.IntProperty, 
                     x => x.ObjectProperty,
                     x => x.StringProperty);
