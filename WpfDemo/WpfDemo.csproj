@@ -58,7 +58,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Components\LoggerHelper.cs" />
+    <Compile Include="Components\FormatExtensions.cs" />
     <Compile Include="Components\DataModelBase.cs" />
     <Compile Include="Components\PropertyChangedInterceptor.cs" />
     <Compile Include="Domain\CarImage.cs" />
